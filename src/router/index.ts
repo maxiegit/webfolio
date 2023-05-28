@@ -1,11 +1,15 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteMeta, RouteRecordRaw } from 'vue-router'
+import Vue from 'vue';
 import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      title: '<Max />'
+    }
   },
   {
     path: '/about',
@@ -21,5 +25,15 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+// const DEFAULT_TITLE = 'Some Default Title';
+// router.afterEach((to, from) => {
+//     // Use next tick to handle router history correctly
+//     // see: https://github.com/vuejs/vue-router/issues/914#issuecomment-384477609
+//     Vue.nextTick(() => {
+//         const meta = to.meta as RouteMeta;
+//         document.title = meta.title || DEFAULT_TITLE;
+//     });
+// });
 
 export default router

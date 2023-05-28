@@ -1,0 +1,57 @@
+    .cardBody{
+        width: 200px;
+        height: 300px;
+        border-radius: 30px;
+        box-shadow: 5px 10px;
+        padding: 16px;
+        margin: auto;
+        display: flex;
+        text-decoration: none !important;    
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .cardBody.blue{
+        background-color: rgb(169, 210, 219);
+    }
+
+    .cardBody.yellow{
+        background-color: #E9C46A;
+    }
+
+    .cardBody:hover{
+        transform: translate(2.5px, 5px);
+        box-shadow: 2.5px 5px;
+    }
+
+    .cardBody:link { color: #2c3e50 }
+    .cardBody:visited { color: #2c3e50 }
+    .cardBody:link { color: #2c3e50 }
+
+    .cardBody {
+        position: relative;
+    }
+
+    .cardBody a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: inherit;
+        text-decoration: none; /* No underlines on the link */
+        z-index: 1; /* Places the link above everything else in the div */
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
+
+    .cardBody p {
+        color: #2c3e50;
+        text-decoration: none; /* No underlines on the link */
+    }
+
+    .cardText{
+        position: relative;
+        z-index: 2;
+        overflow-wrap: break-word;
+    }
